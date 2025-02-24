@@ -1,0 +1,18 @@
+[package]
+name = "mailbox"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["full"] }
+
+# 添加 groundstation 作为一个可执行目标
+[[bin]]
+name = "groundstation"
+path = "src/groundstation.rs"
+
+[[bin]]
+name = "mailbox"
+path = "src/main.rs"
